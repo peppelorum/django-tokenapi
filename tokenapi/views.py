@@ -41,6 +41,7 @@ def token_new(request):
 # token/:token/:user.json
 # Required: user
 # Returns: success
+@csrf_exempt
 def token(request, token, user):
     try:
         user = User.objects.get(pk=user)
